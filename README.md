@@ -14,7 +14,7 @@ Instalação:
 
 Migrar banco:
 
-		composer migrate composer seed
+		composer migrate && composer seed
 
 ## Configurações
 
