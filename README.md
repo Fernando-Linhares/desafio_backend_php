@@ -8,15 +8,13 @@ Este projeto tem como objetivo resolver de maneira simples e eficiente os desafi
 
 Passo a passo de instalação do projeto.
 
-composer install
+		composer install
 
-composer post-install
+		composer post-install
 
-composer migrate
+		composer migrate
 
-composer seed
-
-  
+		composer seed
 
 ## Configurações
 
