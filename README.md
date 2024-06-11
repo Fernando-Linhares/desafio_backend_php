@@ -8,13 +8,13 @@ Este projeto tem como objetivo resolver de maneira simples e eficiente os desafi
 
 Passo a passo de instalação do projeto.
 
-		composer install
+Instalação:
 
-		composer post-install
+		composer install && composer post-install
 
-		composer migrate
+Migrar banco:
 
-		composer seed
+		composer migrate composer seed
 
 ## Configurações
 
@@ -478,6 +478,9 @@ De forma bem simples para rodas os testes basta usar o comando:
 ## Dependencias
 
 <ul>
+	<li>PHP 8.x</li>
+	<li>Composer 2.x</li>
+	<li>sqlite3 ou mysql</li>
 	<li>robmorgan/phinx - 0.16.</li>
 	<li>psr/container - 2.x</li>
 	<li>ramsey/collection - 2.x</li>
