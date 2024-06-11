@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/home/fernando/projects/orders_products/phpunit.xml" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.003870">
+    <testsuite name="Project Test Suite" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.003870">
+      <testsuite name="Tests\Packages\DotenvTest" file="/home/fernando/projects/orders_products/tests/Packages/DotenvTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.003870">
+        <testcase name="test_load_dotenv_file_should_be_ok" file="/home/fernando/projects/orders_products/tests/Packages/DotenvTest.php" line="10" class="Tests\Packages\DotenvTest" classname="Tests.Packages.DotenvTest" assertions="1" time="0.003870"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

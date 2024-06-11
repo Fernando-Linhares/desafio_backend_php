@@ -1,0 +1,46 @@
+version: '3.9'
+services:
+  store.web:
+    container_name: store.web
+    build:
+        context: ./docker
+        dockerfile: Dockerfile
+        args:
+            WWWGROUP: '${WWWGROUP}'
+    extra_hosts:
+        - 'host.docker.internal:host-gateway'
+    ports:
+        - '${APP_PORT:-8000}:8000'
+    environment:
+        WWWUSER: '${WWWUSER}'
+        IGNITION_LOCAL_SITES_PATH: '${PWD}'
+    volumes:
+        - '.:/var/www/html'
+    networks:
+        - store.network
+    depends_on:
+        - store.db
+  store.db:
+    image: mysql:8.0
+    container_name: store.db
+    environment:
+      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_DATABASE: '${DB_NAME}'
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+    ports:
+      - '${DB_PORT:-3306}:3306'
+    volumes:
+      - store.db.vol:/var/lib/mysql
+    networks:
+      - store.network
+
+volumes:
+  store.db.vol:
+    name: store.db.vol
+    driver: local
+
+networks:
+  store.network:
+    name: store.network
+    driver: bridge
