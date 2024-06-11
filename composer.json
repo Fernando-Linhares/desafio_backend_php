@@ -27,8 +27,7 @@
         "psr/container": "^2.0",
         "ramsey/collection": "^2.0",
         "illuminate/database": "^11.10",
-        "guzzlehttp/guzzle": "^7.8",
-        "firebase/php-jwt": "^6.10"
+        "guzzlehttp/guzzle": "^7.8"
     },
     "scripts": {
         "test": "@php vendor/bin/phpunit",

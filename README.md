@@ -408,7 +408,7 @@ De forma bem simples para rodas os testes basta usar o comando:
 
 --------------
 
-| POST | ``/orders/add/`` | no body |
+| POST | ``/orders/add/`` | form urlencoded |
 | -------- | ------- | ------- |
 ####
 
@@ -475,3 +475,15 @@ De forma bem simples para rodas os testes basta usar o comando:
 ```
 
 --------------
+
+
+## Dependencias
+
+<ul>
+	<li>robmorgan/phinx - 0.16.</li>
+	<li>psr/container - 2.x</li>
+	<li>ramsey/collection - 2.x</li>
+	<li>illuminate/database - 11.1</li>
+	<li> guzzlehttp/guzzle - 7.x</li>
+<ul>
+
