@@ -274,7 +274,6 @@ De forma bem simples para rodas os testes basta usar o comando:
 ... ]
 }
 
-
 ```
 
 --------------
@@ -409,9 +408,6 @@ De forma bem simples para rodas os testes basta usar o comando:
 
 --------------
 
-
-## Orders
-
 | POST | ``/orders/add/`` | no body |
 | -------- | ------- | ------- |
 ####
@@ -458,8 +454,6 @@ De forma bem simples para rodas os testes basta usar o comando:
 ```
 
 --------------
-
-## Orders
 
 | GET | ``/orders/{id}`` | no body |
 | -------- | ------- | ------- |
