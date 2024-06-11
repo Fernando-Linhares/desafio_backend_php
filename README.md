@@ -46,17 +46,56 @@ De forma bem simples para rodas os testes basta usar o comando:
 #### Iniciar servidor
 
                 php -S localhost:8080 -t public/
-  
 
 ## Rotas altertnativas
-
   
 
 #### Produtos:
+  
+
+| GET | ``/products/`` | no body |
+| -------- | ------- | ------- |
+
+####
+
+| Response | 200 |
+| ------ | ---- |
+
+```json
+
+{
+	"data": [
+	{
+		"id":  60,
+		"name":  "Aspirador de Pó Philips",
+		"price":  800,
+		"category_id":  3,
+		"deleted_at":  null,
+		"created_at":  "2024-06-11T18:30:02.000000Z",
+		"updated_at":  "2024-06-11T18:30:02.000000Z",
+		"fee":  80,
+		"net_value":  880,
+		"category": {
+			"id":  3,
+			"name":  "Eletrodomésticos",
+			"deleted_at":  null,
+			"fee":  10,
+			"created_at":  "2024-06-11T18:22:37.000000Z",
+			"updated_at":  "2024-06-11T18:22:37.000000Z"
+			}
+		},
+... ]
+
+}
 
   
 
-| GET | ``'/products/`` | no body |
+```
+
+--------------
+
+
+| GET | ``/products/{id}`` | no body |
 | -------- | ------- | ------- |
 
 ####
@@ -69,53 +108,376 @@ De forma bem simples para rodas os testes basta usar o comando:
 ```json
 
 {
-
-	"data": [
-
-	{
-
-			"id":  60,
-
-			"name":  "Aspirador de Pó Philips",
-
-			"price":  800,
-
-			"category_id":  3,
-
+	"data": {
+		"id":  60,
+		"name":  "Aspirador de Pó Philips",
+		"price":  800,
+		"category_id":  3,
+		"deleted_at":  null,
+		"created_at":  "2024-06-11T18:30:02.000000Z",
+		"updated_at":  "2024-06-11T18:30:02.000000Z",
+		"fee":  80,
+		"net_value":  880,
+		"category": {
+			"id":  3,
+			"name":  "Eletrodomésticos",
 			"deleted_at":  null,
+			"fee":  10,
+			"created_at":  "2024-06-11T18:22:37.000000Z",
+			"updated_at":  "2024-06-11T18:22:37.000000Z"
+			}
+		},
+}
 
-			"created_at":  "2024-06-11T18:30:02.000000Z",
+```
 
-			"updated_at":  "2024-06-11T18:30:02.000000Z",
+--------------
 
-			"fee":  80,
+| POST | ``/products/`` | form urlencoded |
+| -------- | ------- | ------- |
 
-			"net_value":  880,
+####
 
-			"category": {
+| Form | -- |
+|------|----|
+| name | notebook acer |
+| price | 4000 |
+| category_id | 1 |
 
-				"id":  3,
+####
 
-				"name":  "Eletrodomésticos",
+| Response | 201 |
+| ------ | ------ |
 
-				"deleted_at":  null,
 
-				"fee":  10,
+```json
 
-				"created_at":  "2024-06-11T18:22:37.000000Z",
+{
 
-				"updated_at":  "2024-06-11T18:22:37.000000Z"
-
-				}
-
-			},
-
-... ]
-
+	"data": {
+		"id":  60,
+		"name":  "Aspirador de Pó Philips",
+		"price":  800,
+		"category_id":  3,
+		"deleted_at":  null,
+		"created_at":  "2024-06-11T18:30:02.000000Z",
+		"updated_at":  "2024-06-11T18:30:02.000000Z",
+		"fee":  80,
+		"net_value":  880,
+		"category": {
+			"id":  3,
+			"name":  "Eletrodomésticos",
+			"deleted_at":  null,
+			"fee":  10,
+			"created_at":  "2024-06-11T18:22:37.000000Z",
+			"updated_at":  "2024-06-11T18:22:37.000000Z"
+			}
+		},
 }
 
   
 
+```
+
+--------------
+
+
+
+| PUT | ``/products/{id}`` | form urlencoded |
+| -------- | ------- | ------- |
+
+####
+
+| Form | -- |
+|------|----|
+| name | notebook acer1 |
+| price | 4000 |
+| category_id | 1 |
+
+####
+
+| Response | 201 |
+| ------ | ------ |
+
+
+```json
+
+{
+	"data": {
+		"id":  60,
+		"name":  "Aspirador de Pó Philips",
+		"price":  800,
+		"category_id":  3,
+		"deleted_at":  null,
+		"created_at":  "2024-06-11T18:30:02.000000Z",
+		"updated_at":  "2024-06-11T18:30:02.000000Z",
+		"fee":  80,
+		"net_value":  880,
+		"category": {
+			"id":  3,
+			"name":  "Eletrodomésticos",
+			"deleted_at":  null,
+			"fee":  10,
+			"created_at":  "2024-06-11T18:22:37.000000Z",
+			"updated_at":  "2024-06-11T18:22:37.000000Z"
+			}
+		},
+} 
+
+```
+
+--------------
+
+| DELETE | ``/products/{id}`` | no body |
+| -------- | ------- | ------- |
+
+####
+
+| Response | 200 |
+| ------ | ---- |
+
+  
+
+```json
+
+{
+	"data":"product deleted successfully"
+}
+```
+
+--------------
+
+#### Categories:
+
+| GET | ``/categories/`` | no body |
+| -------- | ------- | ------- |
+
+####
+
+| Response | 200 |
+| ------ | ---- |
+
+  
+
+```json
+
+{
+	"data": [
+		{
+			"id": 1,
+			"name": "Notebooks",
+			"deleted_at": null,
+			"fee": 6,
+			"created_at": "2024-06-11T14:29:41.000000Z",
+			"updated_at": "2024-06-11T14:29:41.000000Z"
+		},
+... ]
+}
+
+
+```
+
+--------------
+
+
+| GET | ``/categories/{id}`` | no body |
+| -------- | ------- | ------- |
+
+####
+
+| Response | 200 |
+| ------ | ---- | 
+
+```json
+
+{
+	"data": {
+		"id": 1,
+		"name": "Notebooks",
+		"deleted_at": null,
+		"fee": 6,
+		"created_at": "2024-06-11T14:29:41.000000Z",
+		"updated_at": "2024-06-11T14:29:41.000000Z"
+	}
+}
+
+```
+
+--------------
+
+| POST | ``/categories/`` | form urlencoded |
+| -------- | ------- | ------- |
+
+####
+
+| Form | -- |
+|------|----|
+| name | Notebooks |
+| fee | 10 |
+
+####
+
+| Response | 201 |
+| ------ | ------ |
+```json
+
+{
+	"data": {
+		"id": 1,
+		"name": "Notebooks",
+		"deleted_at": null,
+		"fee": 6,
+		"created_at": "2024-06-11T14:29:41.000000Z",
+		"updated_at": "2024-06-11T14:29:41.000000Z"
+	}
+}
+
+```
+
+--------------
+
+
+| PUT | ``/categories/{id}`` | form urlencoded |
+| -------- | ------- | ------- |
+
+####
+
+| Form | -- |
+|------|----|
+| name | Notebooks |
+| fee | 20 |
+
+####
+
+| Response | 201 |
+| ------ | ------ |
+
+```json
+
+{
+	"data": {
+		"id": 1,
+		"name": "Notebooks",
+		"deleted_at": null,
+		"fee": 6,
+		"created_at": "2024-06-11T14:29:41.000000Z",
+		"updated_at": "2024-06-11T14:29:41.000000Z"
+	}
+}
+
+```
+
+--------------
+
+
+| DELETE | ``/categories/{id}`` | no body |
+| -------- | ------- | ------- |
+
+####
+
+| Response | 200 |
+| ------ | ---- |
+
+```json
+
+{
+	"data":"category deleted successfully"
+}
+```
+
+--------------
+
+## Orders
+
+| POST | ``/orders/`` | no body |
+| -------- | ------- | ------- |
+
+####
+
+| Response | 200 |
+| ------ | ---- |
+
+```json
+{
+	"data": {
+		"id": 12,
+		"updated_at": "2024-06-11T14:59:57.000000Z",
+		"created_at": "2024-06-11T14:59:57.000000Z"
+	}
+}
+```
+
+--------------
+
+
+## Orders
+
+| POST | ``/orders/add/`` | no body |
+| -------- | ------- | ------- |
+####
+
+| Form | -- |
+|------|----|
+| product_id | 3 |
+| order_id | 1 |
+
+####
+
+| Response | 200 |
+| ------ | ---- |
+
+```json
+{
+	"data": {
+		"product": {
+			"id": 3,
+			"name": "Notebook Lenovo Ideapad",
+			"price": "3200",
+			"category_id": 1,
+			"deleted_at": null,
+			"created_at": "2024-06-11T09:45:49.000000Z",
+			"updated_at": "2024-06-11T09:45:49.000000Z",
+			"fee": 192,
+			"net_value": 3392,
+			"category": {
+				"id": 1,
+				"name": "Notebooks",
+				"deleted_at": null,
+				"fee": 6,
+				"created_at": "2024-06-11T09:45:49.000000Z",
+				"updated_at": "2024-06-11T09:45:49.000000Z"
+			}
+		},
+		"order": {
+			"id": 1,
+			"created_at": "2024-06-11T12:45:55.000000Z",
+			"updated_at": "2024-06-11T12:45:55.000000Z"
+		}
+	}
+}
+```
+
+--------------
+
+## Orders
+
+| GET | ``/orders/{id}`` | no body |
+| -------- | ------- | ------- |
+
+####
+
+| Response | 200 |
+| ------ | ---- |
+
+```json
+{
+	"data": {
+		"fee": "R$ 954,00",
+		"net_value": "R$ 16.854,00",
+		"gross_value": "R$ 15.900,00",
+		"amount": 5
+	}
+}
 ```
 
 --------------

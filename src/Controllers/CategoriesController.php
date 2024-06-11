@@ -44,11 +44,11 @@ class CategoriesController extends BaseController
     {
         if($this->repository->delete($id))
             return $this->json([
-                'data' => 'product deleted successfully'
+                'data' => 'category deleted successfully'
             ]);
 
         return $this->json([
-            'error' => 'delete product fail'
+            'error' => 'delete category fail'
         ], 500);
     }
 }
