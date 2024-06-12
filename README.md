@@ -20,12 +20,11 @@ Migrar banco:
 
   
 
-Esse projeto guarda suas configurações em variáveis de ambiente. Por tanto fazendo uso de um arquivo ```.env``` para guardar essas informações.
+Esse projeto guarda suas configurações em variáveis de ambiente. Por tanto, fazendo uso de um arquivo ```.env``` para guardar essas informações.
 
   
 
-O comando ```composer post-install``` irá fazer uma versão desse arquivo para que possa ser configurado informações de banco, versão e ambiente de do projeto.
-
+O comando ```composer post-install``` faz uma versão desse arquivo para configurar as informações de banco, versão e ambiente e etc.
   
 
 >Por padrão o projeto cria um sqlite mas pode-se configurar o banco no arquivo ```.env```
@@ -34,19 +33,35 @@ O comando ```composer post-install``` irá fazer uma versão desse arquivo para 
 
 ## Rodar tests
 
-  
 
-De forma bem simples para rodas os testes basta usar o comando:
+De forma bem simples para iniciar os testes basta usar o comando:
 
-  
-                composer test
+		composer test
 
 #### Iniciar servidor
 
-                php -S localhost:8080 -t public/
+		php -S localhost:8080 -t public/
 
-## Rotas altertnativas
-  
+## Rotas do Projeto
+
+### Rotas do teste
+
+O ponto principal solicitado seriam formas inteligentes de fazer um pedido. Nesse caso o sistema deve retornar valores como: ``taxas - fee``, ``valor bruto - gross_value``, ``valor líquido - net_value``.
+
+A rotas a que se aplica essa regra são:
+
+<a href="#criar">Criar Pedido</a>. Essa rota é responsável por iniciar a instancia de pedido.
+
+<a href="#adicionar">Adicionar Produto</a>. Essa rota é responsável por adicionar produtos ao pedido
+
+<a href="#ver">Ver Pedido</a>. Essa rota é responsável por mostrar os valores, assim como taxas e outros cáculos.
+
+É importante informar que os pedidos que cada as taxas dos pedidos estão ligadas as categorias dos produtos sendo:
+<ul>
+	<li>Notebooks: 6%</li>
+	<li>Smart Phones: 8%</li>
+	<li>Eletrodomésticos: 10%</li>
+</ul>
 
 #### Produtos:
   
@@ -386,6 +401,7 @@ De forma bem simples para rodas os testes basta usar o comando:
 
 ## Orders
 
+#### criar
 | POST | ``/orders/`` | no body |
 | -------- | ------- | ------- |
 
@@ -406,6 +422,7 @@ De forma bem simples para rodas os testes basta usar o comando:
 
 --------------
 
+#### adicionar
 | POST | ``/orders/add/`` | form urlencoded |
 | -------- | ------- | ------- |
 ####
@@ -452,7 +469,7 @@ De forma bem simples para rodas os testes basta usar o comando:
 ```
 
 --------------
-
+#### ver
 | GET | ``/orders/{id}`` | no body |
 | -------- | ------- | ------- |
 
