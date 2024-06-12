@@ -76,11 +76,11 @@ O ponto principal solicitado seriam formas inteligentes de fazer um pedido. Ness
 
 A rotas a que se aplica essa regra são:
 
-<a href="#Criar pedidos ">Criar Pedido</a>. Essa rota é responsável por iniciar a instancia de pedido.
+<a href="#o1">Criar Pedido</a>. Essa rota é responsável por iniciar a instancia de pedido.
 
-<a href="#Adicionar pedidos">Adicionar Produto</a>. Essa rota é responsável por adicionar produtos ao pedido
+<a href="#o2">Adicionar Produto</a>. Essa rota é responsável por adicionar produtos ao pedido
 
-<a href="#Ver Pedidos">Ver Pedido</a>. Essa rota é responsável por mostrar os valores, assim como taxas e outros cáculos.
+<a href="#o3">Ver Pedido</a>. Essa rota é responsável por mostrar os valores, assim como taxas e outros cáculos.
 
 É importante informar que os pedidos que cada as taxas dos pedidos estão ligadas as categorias dos produtos sendo:
 <ul>
