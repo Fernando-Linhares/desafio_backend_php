@@ -48,25 +48,25 @@ De forma bem simples para iniciar os testes basta usar o comando:
 <ol>
 	<li><a href="#Products">Produtos</a></li>
 	<ul>
-		<li><a href="#Listar produtos">listar</a></li>
-		<li><a href="#Ver produto">ver</a></li>
-		<li><a href="#Criar produto">criar</a></li>
-		<li><a href="#Alterar Produto">alterar</a></li>
-		<li><a href="#Remover Produto">remover</a></li>
+		<li><a href="#p1">listar</a></li>
+		<li><a href="#p2">ver</a></li>
+		<li><a href="#p3">criar</a></li>
+		<li><a href="#p4">alterar</a></li>
+		<li><a href="#p5">remover</a></li>
 	</ul>
 	<li><a href="#Categories">Categorias</a></li>
 	<ul>
-		<li><a href="#Listar categorias">listar</a></li>
-		<li><a href="#Ver categoria">ver</a></li>
-		<li><a href="#Criar categoria">criar</a></li>
-		<li><a href="#Alterar categoria">alterar</a></li>
-		<li><a href="#Remover categoria">remover</a></li>
+		<li><a href="#c1">listar</a></li>
+		<li><a href="#c2">ver</a></li>
+		<li><a href="#c3">criar</a></li>
+		<li><a href="#c4">alterar</a></li>
+		<li><a href="#c5">remover</a></li>
 	</ul>
 	<li><a href="#Orders"> Pedidos</a></li>
 	<ul>
-		<li><a href="#Adicionar pedido">adicionar</a></li>
-		<li><a href="#Ver pedido">ver</a></li>
-		<li><a href="#Criar pedido">criar</a></li>
+		<li><a href="#o1">adicionar</a></li>
+		<li><a href="#o2">ver</a></li>
+		<li><a href="#o3">criar</a></li>
 	</ul>
 </ol>
 
@@ -92,7 +92,7 @@ A rotas a que se aplica essa regra são:
 #### Produtos:
   
 
-#### Listar produtos
+#### p1
 
 | GET | ``/products/`` | no body |
 | -------- | ------- | ------- |
@@ -133,7 +133,7 @@ A rotas a que se aplica essa regra são:
 
 ```
 
-#### Ver produto
+#### p2
 --------------
 
 
@@ -173,7 +173,7 @@ A rotas a que se aplica essa regra são:
 
 ```
 
-#### Criar produto
+#### p3
 --------------
 
 | POST | ``/products/`` | form urlencoded |
@@ -224,7 +224,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
-#### Alterar produto
+#### p4
 
 
 | PUT | ``/products/{id}`` | form urlencoded |
@@ -270,7 +270,7 @@ A rotas a que se aplica essa regra são:
 
 ```
 
-#### Remover produto
+#### p5
 
 --------------
 
@@ -295,7 +295,7 @@ A rotas a que se aplica essa regra são:
 
 #### Categories:
 
-#### Listar categorias
+#### c1
 
 
 | GET | ``/categories/`` | no body |
@@ -327,7 +327,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
-#### Ver categoria
+#### c2
 
 | GET | ``/categories/{id}`` | no body |
 | -------- | ------- | ------- |
@@ -354,7 +354,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
-#### Criar categoria
+#### c3
 
 | POST | ``/categories/`` | form urlencoded |
 | -------- | ------- | ------- |
@@ -387,7 +387,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
-#### Alterar categoria
+#### c4
 
 | PUT | ``/categories/{id}`` | form urlencoded |
 | -------- | ------- | ------- |
@@ -421,7 +421,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
-#### Remover categoria
+#### c5
 
 | DELETE | ``/categories/{id}`` | no body |
 | -------- | ------- | ------- |
@@ -442,7 +442,7 @@ A rotas a que se aplica essa regra são:
 
 ## Orders
 
-#### Criar pedido
+#### o1
 
 | POST | ``/orders/`` | no body |
 | -------- | ------- | ------- |
@@ -464,7 +464,8 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
-#### Adicionar pedido
+#### o2
+
 | POST | ``/orders/add/`` | form urlencoded |
 | -------- | ------- | ------- |
 ####
@@ -511,7 +512,7 @@ A rotas a que se aplica essa regra são:
 ```
 
 --------------
-#### Ver pedido
+#### o3
 | GET | ``/orders/{id}`` | no body |
 | -------- | ------- | ------- |
 
