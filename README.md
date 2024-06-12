@@ -31,8 +31,7 @@ O comando ```composer post-install``` faz uma versão desse arquivo para configu
 
   
 
-## Rodar tests
-
+## Executar testes
 
 De forma bem simples para iniciar os testes basta usar o comando:
 
@@ -44,17 +43,44 @@ De forma bem simples para iniciar os testes basta usar o comando:
 
 ## Rotas do Projeto
 
-### Rotas do teste
+## Remsumo
+
+<ol>
+	<li><a href="#Products">Produtos</a></li>
+	<ul>
+		<li><a href="#Listar produtos">listar</a></li>
+		<li><a href="#Ver produto">ver</a></li>
+		<li><a href="#Criar produto">criar</a></li>
+		<li><a href="#Alterar Produto">alterar</a></li>
+		<li><a href="#Remover Produto">remover</a></li>
+	</ul>
+	<li><a href="#Categories">Categorias</a></li>
+	<ul>
+		<li><a href="#Listar categorias">listar</a></li>
+		<li><a href="#Ver categoria">ver</a></li>
+		<li><a href="#Criar categoria">criar</a></li>
+		<li><a href="#Alterar categoria">alterar</a></li>
+		<li><a href="#Remover categoria">remover</a></li>
+	</ul>
+	<li><a href="#Orders"> Pedidos</a></li>
+	<ul>
+		<li><a href="#Adicionar pedido">adicionar</a></li>
+		<li><a href="#Ver pedido">ver</a></li>
+		<li><a href="#Criar pedido">criar</a></li>
+	</ul>
+</ol>
+
+### Rotas do desafio
 
 O ponto principal solicitado seriam formas inteligentes de fazer um pedido. Nesse caso o sistema deve retornar valores como: ``taxas - fee``, ``valor bruto - gross_value``, ``valor líquido - net_value``.
 
 A rotas a que se aplica essa regra são:
 
-<a href="#criar">Criar Pedido</a>. Essa rota é responsável por iniciar a instancia de pedido.
+<a href="#Criar pedidos ">Criar Pedido</a>. Essa rota é responsável por iniciar a instancia de pedido.
 
-<a href="#adicionar">Adicionar Produto</a>. Essa rota é responsável por adicionar produtos ao pedido
+<a href="#Adicionar pedidos">Adicionar Produto</a>. Essa rota é responsável por adicionar produtos ao pedido
 
-<a href="#ver">Ver Pedido</a>. Essa rota é responsável por mostrar os valores, assim como taxas e outros cáculos.
+<a href="#Ver Pedidos">Ver Pedido</a>. Essa rota é responsável por mostrar os valores, assim como taxas e outros cáculos.
 
 É importante informar que os pedidos que cada as taxas dos pedidos estão ligadas as categorias dos produtos sendo:
 <ul>
@@ -65,6 +91,8 @@ A rotas a que se aplica essa regra são:
 
 #### Produtos:
   
+
+#### Listar produtos
 
 | GET | ``/products/`` | no body |
 | -------- | ------- | ------- |
@@ -105,6 +133,7 @@ A rotas a que se aplica essa regra são:
 
 ```
 
+#### Ver produto
 --------------
 
 
@@ -144,6 +173,7 @@ A rotas a que se aplica essa regra são:
 
 ```
 
+#### Criar produto
 --------------
 
 | POST | ``/products/`` | form urlencoded |
@@ -194,6 +224,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
+#### Alterar produto
 
 
 | PUT | ``/products/{id}`` | form urlencoded |
@@ -239,6 +270,8 @@ A rotas a que se aplica essa regra são:
 
 ```
 
+#### Remover produto
+
 --------------
 
 | DELETE | ``/products/{id}`` | no body |
@@ -261,6 +294,9 @@ A rotas a que se aplica essa regra são:
 --------------
 
 #### Categories:
+
+#### Listar categorias
+
 
 | GET | ``/categories/`` | no body |
 | -------- | ------- | ------- |
@@ -291,6 +327,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
+#### Ver categoria
 
 | GET | ``/categories/{id}`` | no body |
 | -------- | ------- | ------- |
@@ -316,6 +353,8 @@ A rotas a que se aplica essa regra são:
 ```
 
 --------------
+
+#### Criar categoria
 
 | POST | ``/categories/`` | form urlencoded |
 | -------- | ------- | ------- |
@@ -348,6 +387,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
+#### Alterar categoria
 
 | PUT | ``/categories/{id}`` | form urlencoded |
 | -------- | ------- | ------- |
@@ -381,6 +421,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
+#### Remover categoria
 
 | DELETE | ``/categories/{id}`` | no body |
 | -------- | ------- | ------- |
@@ -401,7 +442,8 @@ A rotas a que se aplica essa regra são:
 
 ## Orders
 
-#### criar
+#### Criar pedido
+
 | POST | ``/orders/`` | no body |
 | -------- | ------- | ------- |
 
@@ -422,7 +464,7 @@ A rotas a que se aplica essa regra são:
 
 --------------
 
-#### adicionar
+#### Adicionar pedido
 | POST | ``/orders/add/`` | form urlencoded |
 | -------- | ------- | ------- |
 ####
@@ -469,7 +511,7 @@ A rotas a que se aplica essa regra são:
 ```
 
 --------------
-#### ver
+#### Ver pedido
 | GET | ``/orders/{id}`` | no body |
 | -------- | ------- | ------- |
 
