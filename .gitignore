@@ -3,3 +3,4 @@ vendor
 .phpunit.result.cache
 db.sqlite3
 db_main.sqlite3
+.server.testing.log
