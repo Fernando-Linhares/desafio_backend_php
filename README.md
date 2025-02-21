@@ -1,7 +1,7 @@
 
 ## Desafio Técnico para Desenvolvedor(a) Backend PHP 
 
-Este projeto tem como objetivo resolver de maneira simples e eficiente os desafios técnicos enfrentados por desenvolvedores PHP backend de nível pleno. A seguir, apresentamos um passo a passo para sua utilização.
+Este projeto tem como objetivo resolver de maneira simples e eficiente os desafios técnicos enfrentados por desenvolvedores PHP backend de nível. A seguir, apresentamos um passo a passo para sua utilização.
   
 
 ### Instalação
