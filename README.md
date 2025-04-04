@@ -9,12 +9,14 @@ Este projeto tem como objetivo resolver de maneira simples e eficiente os desafi
 Passo a passo de instalação do projeto.
 
 Instalação:
-
-		composer install && composer post-install
+```ssh
+composer install && composer post-install
+```
 
 Migrar banco:
-
-		composer migrate && composer seed
+```ssh
+composer migrate && composer seed
+```
 
 ## Configurações
 
