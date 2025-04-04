@@ -35,11 +35,15 @@ O comando ```composer post-install``` faz uma versão desse arquivo para configu
 
 De forma bem simples para iniciar os testes basta usar o comando:
 
-		composer test
+```ssh
+composer test
+```
 
 #### Iniciar servidor
 
-		php -S localhost:8080 -t public/
+```ssh
+php -S localhost:8080 -t public/
+```
 
 ## Rotas do Projeto
 
